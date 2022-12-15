@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15Dec</title>
+    <style></style>
+    <script></script>
+  </head>
+  <body>
+    <div>
+        <div style="background-color:rgb(129, 129, 79);">
+
+        <h1 style="text-align:center;"><img src="./img/images.png" alt="img" style="width: 20px; z-index: 1;"><strong><i>The Indian</i> EXPRESS</strong></h1>
+        <h2 style="text-align:center;"><em>journalism of courage!</em></h2>
+        <!--here i used strong(for bold), em for italic and anchor link also-->
+        <p style="text-align:centre;">express
+        <a href="https://indianexpress.com/article/explained/explained-politics/on-sardar-patels-death-anniversary-his-views-on-rss-minorities-and-china-8326726/" target="_blank">read more</a><b>
+        On Sardar Patel's death anniversary, his views on RSS, minority communities, and China</b></p>
+    </div>
+    <form action="">
+      <input type="text" name="news" placeholder="Enter the word" />
+
+      <input type="submit" value="Save My News" onclick="saveData(event)" />
+    </form>
+    <i id="itag"></i>
+
+    <script>
+      let itag = document.getElementById("itag");
+      itag.innerHTML = "";
+
+      function saveData(e) {
+        e.preventDefault();
+        let newsPaper = document.querySelector('input[name="news"]');
+        console.log(newsPaper.value);
+        itag.innerHTML += "<i>" + newsPaper.value + "  </i>";
+      }
+    </script>
+  </body>
+</html>
